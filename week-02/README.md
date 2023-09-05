@@ -1,11 +1,5 @@
-PROJECT : Hello World
-
-NIM     : 2141720058
-
-NAMA    : PATRIA ANGGARA SUSILO PUTRA
-
 # Soal No.1
-![Screenshot hello_world](docs/soal_no_1.png)
+![Screenshot dart_basic](docs/soal_no_1.png)
 
 # Soal No.2
 Mengapa sangat penting untuk memahami bahasa pemrograman Dart sebelum kita menggunakan framework Flutter ? Jelaskan!
