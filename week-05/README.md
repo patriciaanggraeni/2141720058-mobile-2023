@@ -61,3 +61,33 @@
 ![Screenshot_Praktikum_4](docs/praktikum4/langkah6b.png)
 
 ![Screenshot_Praktikum_4](docs/praktikum4/langkah6c.png)
+
+# Your first Flutter app
+
+### 1. Add Button
+
+![Screenshoot_FlutterApp](docs/FlutterApp/add_button.png)
+
+
+### 2. Make the app prettier
+
+![Screenshoot_FlutterApp](docs/FlutterApp/make_app_prettier/big_card.png)
+
+![Screenshoot_FlutterApp](docs/FlutterApp/make_app_prettier/theme_and_style.png)
+
+![Screenshoot_FlutterApp](docs/FlutterApp/make_app_prettier/text_theme.png)
+
+![Screenshoot_FlutterApp](docs/FlutterApp/make_app_prettier/improve_acessibility.png)
+
+![Screenshoot_FlutterApp](docs/FlutterApp/make_app_prettier/center_the_ui.png)
+
+### 2. Add Functionality
+
+![Screenshoot_FlutterApp](docs/FlutterApp/add_functionality.png)
+
+### 3. Add Navigation Rail
+
+![Screenshoot_FlutterApp](docs/FlutterApp/add_navigation_rail.png)
+
+### 4. Add New Page
+![Screenshoot_FlutterApp](docs/FlutterApp/add_new_page.png)
