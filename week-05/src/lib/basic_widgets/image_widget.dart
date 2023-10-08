@@ -5,8 +5,13 @@ class MyImageWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Image(
-        image: AssetImage("assets/image.jpeg")
+    return const ClipOval(
+      child: Image(
+        image: AssetImage("assets/image.jpeg"),
+        width: 175,
+        height: 175,
+        fit: BoxFit.cover,
+      )
     );
   }
 }

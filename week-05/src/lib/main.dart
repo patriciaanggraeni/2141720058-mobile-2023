@@ -122,6 +122,8 @@ class GeneratorPage extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          const MyImageWidget(),
+          SizedBox(height: 25),
           BigCard(pair: pair),
           SizedBox(height: 10),
           Row(

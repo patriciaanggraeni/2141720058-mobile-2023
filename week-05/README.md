@@ -91,3 +91,6 @@
 
 ### 4. Add New Page
 ![Screenshoot_FlutterApp](docs/FlutterApp/add_new_page.png)
+
+## Testing App on Mobile Device
+![Gif_Testing_App](docs/app_testing/test.gif)
