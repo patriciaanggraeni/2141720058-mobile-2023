@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_layout/praktikum/praktikum_dua.dart';
+import 'package:flutter_layout/praktikum/praktikum_empat.dart';
 import 'package:flutter_layout/praktikum/praktikum_satu.dart';
 import 'package:flutter_layout/praktikum/praktikum_tiga.dart';
 
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
             ),
             body: Column(
               children: [
+                ImageSection().imageSection(),
                 FlutterLayout().titleSection(),
                 ButtonRow(context: context).buttonSection(),
                 TextSection().textSection(),

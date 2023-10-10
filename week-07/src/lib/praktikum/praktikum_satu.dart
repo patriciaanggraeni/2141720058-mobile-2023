@@ -14,14 +14,14 @@ class FlutterLayout {
                   Container(
                     padding: const EdgeInsets.only(bottom: 8),
                     child: const Text(
-                      "Wisata Gunung di Batu",
+                      "Wisata Alam Air Terjun Seweru",
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                       ),
                     )
                   ),
                   const Text(
-                    "Batu, Malang, Indonesia",
+                    "Gunung Wilis, Madiun, Indonesia",
                     style: TextStyle(
                       color: Colors.grey,
                     ),
