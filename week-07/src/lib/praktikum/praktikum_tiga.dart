@@ -12,6 +12,7 @@ class TextSection {
         "Objek wisata ini kerap dikunjungi para remaja dan pemerhati lingkungan karena panorama yang indah"
         "dan mencengangkan.",
         softWrap: true,
+        textAlign: TextAlign.justify,
       ),
     );
   }
