@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_layout/praktikum/praktikum_satu.dart';
 
 void main() => runApp(const MyApp());
 
@@ -13,8 +14,10 @@ class MyApp extends StatelessWidget {
             appBar: AppBar(
               title: const Text("Flutter Layout Demo"),
             ),
-            body: const Center(
-              child: Text("Hello World"),
+            body: Column(
+              children: [
+                FlutterLayout().titleSection,
+              ]
             )
         )
     );
