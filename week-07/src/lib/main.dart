@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_layout/praktikum/praktikum_dua.dart';
 import 'package:flutter_layout/praktikum/praktikum_satu.dart';
 
 void main() => runApp(const MyApp());
@@ -16,7 +17,8 @@ class MyApp extends StatelessWidget {
             ),
             body: Column(
               children: [
-                FlutterLayout().titleSection,
+                FlutterLayout().titleSection(),
+                ButtonRow(context: context).buttonSection(),
               ]
             )
         )
