@@ -1,6 +1,6 @@
 {
-    "name": "src",
-    "short_name": "src",
+    "name": "layout_flutter",
+    "short_name": "layout_flutter",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
