@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_layout/layout_basics/main.dart';
 import 'package:flutter_layout/praktikum/praktikum_dua.dart';
 import 'package:flutter_layout/praktikum/praktikum_empat.dart';
 import 'package:flutter_layout/praktikum/praktikum_satu.dart';
@@ -17,12 +18,15 @@ class MyApp extends StatelessWidget {
             appBar: AppBar(
               title: const Text("Flutter Layout Demo"),
             ),
-            body: Column(
+            body: const Row(
               children: [
-                ImageSection().imageSection(),
-                FlutterLayout().titleSection(),
-                ButtonRow(context: context).buttonSection(),
-                TextSection().textSection(),
+                BlueBox(),
+                BlueBox(),
+                BlueBox()
+                // ImageSection().imageSection(),
+                // FlutterLayout().titleSection(),
+                // ButtonRow(context: context).buttonSection(),
+                // TextSection().textSection(),
               ]
             )
         )

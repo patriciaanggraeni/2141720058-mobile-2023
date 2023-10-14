@@ -1,20 +1,6 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
-
-class MyWidget extends StatelessWidget {
-  const MyWidget({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        BlueBox(),
-        const Spacer(flex: 1),
-        BlueBox(),
-        BlueBox(),
-      ],
-    );
-  }
-}
+import 'package:flutter_test/flutter_test.dart';
 
 class BlueBox extends StatelessWidget {
   const BlueBox({super.key});
