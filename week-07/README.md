@@ -40,3 +40,89 @@ Buat folder assets, taruh gambar di folder tersebut. setting file pubspec.yaml, 
 
 ## Basic Flutter layout concepts
 
+### 1. Row and Column classes
+<table style="width: 100%">
+    <thead>
+        <th>Menggunakan Row</th>
+        <th>Mneggunakan Column</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <img src="docs/layout_basics/1.jpg" width="200px">
+            </td>
+             <td>
+                <img src="docs/layout_basics/17.jpg" width="200px">
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+### 2. MainAxisAlignment property
+<table style="width: 100%">
+    <thead>
+        <th>MainAxisAlignment.start</th>
+        <th>CrossAxisAlignment</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <img src="docs/layout_basics/2.jpg" width="200px">
+            </td>
+             <td>
+                <img src="docs/layout_basics/4.jpg" width="200px">
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+### 3. Flexible Widget
+<table style="width: 100%">
+    <thead>
+        <th>Flexsible widget V1</th>
+        <th>Flexsible widget V2</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <img src="docs/layout_basics/5.jpg" width="200px">
+            </td>
+             <td>
+                <img src="docs/layout_basics/6.jpg" width="200px">
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+### 4. Expanded Widget
+<img src="docs/layout_basics/7.jpg" width="200px">
+
+
+### 5. Sized Widget
+<img src="docs/layout_basics/8.jpg" width="200px">
+<img src="docs/layout_basics/9.jpg" width="200px">
+
+
+### 6. Spacer Widget
+<img src="docs/layout_basics/10.jpg" width="200px">
+
+
+### 7. Text Widget
+<img src="docs/layout_basics/11.jpg" width="200px">
+
+
+### 8. Icon Widget
+<img src="docs/layout_basics/12.jpg" width="200px">
+
+
+### 9. Image Widget
+<img src="docs/layout_basics/13.jpg" width="200px">
+<img src="docs/layout_basics/14.jpg" width="200px">
+
+
+### 10. Putting All Together
+<img src="docs/layout_basics/15.jpg" width="200px">
+<img src="docs/layout_basics/16.jpg" width="200px">

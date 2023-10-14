@@ -19,23 +19,21 @@ class MyApp extends StatelessWidget {
               title: const Text("Flutter Layout Demo"),
             ),
             body: Center(
-               child: Column(
+                child: Column(
                   mainAxisSize: MainAxisSize.min,
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     Row(
                       children: [
                         const Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: ClipOval(
-                            child:Image(
+                            padding: EdgeInsets.all(8.0),
+                            child: ClipOval(
+                                child: Image(
                               image: AssetImage("assets/images/profile.jpg"),
                               width: 50,
                               height: 50,
                               fit: BoxFit.cover,
-                            )
-                          )
-                        ),
+                            ))),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisSize: MainAxisSize.min,
@@ -57,9 +55,13 @@ class MyApp extends StatelessWidget {
                           padding: EdgeInsets.all(10),
                           child: Row(
                             children: [
-                              Text('123 Main Street',),
+                              Text(
+                                '123 Main Street',
+                              ),
                               SizedBox(width: 20),
-                              Text('(415) 555-0198',),
+                              Text(
+                                '(415) 555-0198',
+                              ),
                             ],
                           ),
                         )
@@ -70,7 +72,7 @@ class MyApp extends StatelessWidget {
                       children: [],
                     ),
                   ],
-                )
+              )
             )
         )
     );
