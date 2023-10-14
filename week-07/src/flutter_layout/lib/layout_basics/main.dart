@@ -17,3 +17,19 @@ class BlueBox extends StatelessWidget {
     );
   }
 }
+
+class BiggerBlueBox extends StatelessWidget {
+  const BiggerBlueBox({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 50,
+      height: 100,
+      decoration: BoxDecoration(
+        color: Colors.blue,
+        border: Border.all(),
+      ),
+    );
+  }
+}

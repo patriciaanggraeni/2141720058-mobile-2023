@@ -18,10 +18,13 @@ class MyApp extends StatelessWidget {
             appBar: AppBar(
               title: const Text("Flutter Layout Demo"),
             ),
-            body: const Column(
+            body: const Row(
+              // mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 BlueBox(),
-                BlueBox(),
+                BiggerBlueBox(),
                 BlueBox()
                 // ImageSection().imageSection(),
                 // FlutterLayout().titleSection(),
