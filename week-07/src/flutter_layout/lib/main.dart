@@ -29,10 +29,11 @@ class MyApp extends StatelessWidget {
                   // Expanded(
                   //     child: BlueBox(),
                   // ),
-                  SizedBox(
-                    width: 100,
-                    child: BlueBox(),
-                  ),
+                  SizedBox(width: 50),
+                  // SizedBox(
+                  //   width: 100,
+                  //   child: BlueBox(),
+                  // ),
                   BlueBox(),
                   // BiggerBlueBox(),
                   // BlueBox()
