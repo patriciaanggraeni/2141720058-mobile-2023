@@ -26,8 +26,12 @@ class MyApp extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   BlueBox(),
-                  Expanded(
-                      child: BlueBox(),
+                  // Expanded(
+                  //     child: BlueBox(),
+                  // ),
+                  SizedBox(
+                    width: 100,
+                    child: BlueBox(),
                   ),
                   BlueBox(),
                   // BiggerBlueBox(),
