@@ -26,29 +26,32 @@ class MyApp extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   BlueBox(),
+                  Expanded(
+                      child: BlueBox(),
+                  ),
                   BlueBox(),
                   // BiggerBlueBox(),
                   // BlueBox()
-                  Flexible(
-                    fit: FlexFit.tight,
-                    flex: 1,
-                    child: BlueBox(),
-                  ),
-                  Flexible(
-                    fit: FlexFit.tight,
-                    flex: 1,
-                    child: BlueBox(),
-                  ),
-                  Flexible(
-                    fit: FlexFit.loose,
-                    flex: 1,
-                    child: BlueBox(),
-                  ),
-                  Flexible(
-                    fit: FlexFit.loose,
-                    flex: 1,
-                    child: BlueBox(),
-                  ),
+                  // Flexible(
+                  //   fit: FlexFit.tight,
+                  //   flex: 1,
+                  //   child: BlueBox(),
+                  // ),
+                  // Flexible(
+                  //   fit: FlexFit.tight,
+                  //   flex: 1,
+                  //   child: BlueBox(),
+                  // ),
+                  // Flexible(
+                  //   fit: FlexFit.loose,
+                  //   flex: 1,
+                  //   child: BlueBox(),
+                  // ),
+                  // Flexible(
+                  //   fit: FlexFit.loose,
+                  //   flex: 1,
+                  //   child: BlueBox(),
+                  // ),
                   // ImageSection().imageSection(),
                   // FlutterLayout().titleSection(),
                   // ButtonRow(context: context).buttonSection(),
