@@ -20,22 +20,61 @@ class MyApp extends StatelessWidget {
             ),
             body: const Center(
               child: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                textBaseline: TextBaseline.alphabetic,
+                children: [
+                  Text(
+                    'Hey!',
+                    style: TextStyle(
+                      fontSize: 30,
+                      fontFamily: 'Futura',
+                      color: Colors.blue,
+                    ),
+                  ),
+                  Text(
+                    'Hey!',
+                    style: TextStyle(
+                      fontSize: 50,
+                      fontFamily: 'Futura',
+                      color: Colors.green,
+                    ),
+                  ),
+                  Text(
+                    'Hey!',
+                    style: TextStyle(
+                      fontSize: 40,
+                      fontFamily: 'Futura',
+                      color: Colors.red,
+                    ),
+                  ),
+                ],
+              )
+            )
+        )
+    );
+  }
+}
+
+
+// backup code
+/*
+Row(
                 // mainAxisSize: MainAxisSize.max,
                 // mainAxisAlignment: MainAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  BlueBox(),
+                  // BlueBox(),
                   // Expanded(
                   //     child: BlueBox(),
                   // ),
                   // SizedBox(width: 50),
-                  Spacer(flex: 1),
+                  // Spacer(flex: 1),
                   // SizedBox(
                   //   width: 100,
                   //   child: BlueBox(),
                   // ),
-                  BlueBox(),
+                  // BlueBox(),
                   // BiggerBlueBox(),
                   // BlueBox()
                   // Flexible(
@@ -64,8 +103,4 @@ class MyApp extends StatelessWidget {
                   // TextSection().textSection(),
                 ]
               ),
-            )
-        )
-    );
-  }
-}
+*/
