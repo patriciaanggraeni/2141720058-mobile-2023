@@ -29,7 +29,8 @@ class MyApp extends StatelessWidget {
                   // Expanded(
                   //     child: BlueBox(),
                   // ),
-                  SizedBox(width: 50),
+                  // SizedBox(width: 50),
+                  Spacer(flex: 1),
                   // SizedBox(
                   //   width: 100,
                   //   child: BlueBox(),
