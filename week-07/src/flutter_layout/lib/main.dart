@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
             appBar: AppBar(
               title: const Text("Flutter Layout Demo"),
             ),
-            body: const Row(
+            body: const Column(
               children: [
                 BlueBox(),
                 BlueBox(),
