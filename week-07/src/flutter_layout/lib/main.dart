@@ -18,23 +18,13 @@ class MyApp extends StatelessWidget {
             appBar: AppBar(
               title: const Text("Flutter Layout Demo"),
             ),
-            body: const Center(
+            body: Center(
               child: Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                textBaseline: TextBaseline.alphabetic,
-                children: [
-                  Icon(
-                    Icons.widgets,
-                    size: 50,
-                    color: Colors.blue,
-                  ),
-                  Icon(
-                    Icons.widgets,
-                    size: 50,
-                    color: Colors.red,
-                  ),
-                ],
-              ),
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Image.network('https://raw.githubusercontent.com/flutter/website/main/examples/layout/sizing/images/pic2.jpg'),
+                  ],
             )
         )
     );
@@ -124,4 +114,23 @@ const Center(
                 ],
               )
             )
+*/
+
+/*
+ Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                textBaseline: TextBaseline.alphabetic,
+                children: [
+                  Icon(
+                    Icons.widgets,
+                    size: 50,
+                    color: Colors.blue,
+                  ),
+                  Icon(
+                    Icons.widgets,
+                    size: 50,
+                    color: Colors.red,
+                  ),
+                ],
+              ),
 */
