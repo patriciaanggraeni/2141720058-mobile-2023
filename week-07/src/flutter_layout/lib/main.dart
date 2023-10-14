@@ -19,12 +19,58 @@ class MyApp extends StatelessWidget {
               title: const Text("Flutter Layout Demo"),
             ),
             body: Center(
-              child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
+               child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    Image.network('https://raw.githubusercontent.com/flutter/website/main/examples/layout/sizing/images/pic2.jpg'),
+                    Row(
+                      children: [
+                        const Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: ClipOval(
+                            child:Image(
+                              image: AssetImage("assets/images/profile.jpg"),
+                              width: 50,
+                              height: 50,
+                              fit: BoxFit.cover,
+                            )
+                          )
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Text(
+                              'Mr. Patria Anggara',
+                              style: Theme.of(context).textTheme.headlineSmall,
+                            ),
+                            const Text('Experienced App Developer'),
+                          ],
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 8),
+                    const Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.all(10),
+                          child: Row(
+                            children: [
+                              Text('123 Main Street',),
+                              SizedBox(width: 20),
+                              Text('(415) 555-0198',),
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                    const SizedBox(height: 16),
+                    const Row(
+                      children: [],
+                    ),
                   ],
+                )
             )
         )
     );
@@ -133,4 +179,14 @@ const Center(
                   ),
                 ],
               ),
+*/
+
+/*
+child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Image.network('https://raw.githubusercontent.com/flutter/website/main/examples/layout/sizing/images/pic2.jpg'),
+                  ],
+            )
 */

@@ -54,6 +54,7 @@ dev_dependencies:
 flutter:
   assets:
       - assets/images/wisata_alam_air_terjun_seweru.png
+      - assets/images/profile.jpg
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
