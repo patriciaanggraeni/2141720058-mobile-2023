@@ -18,19 +18,43 @@ class MyApp extends StatelessWidget {
             appBar: AppBar(
               title: const Text("Flutter Layout Demo"),
             ),
-            body: const Row(
-              // mainAxisAlignment: MainAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                BlueBox(),
-                BiggerBlueBox(),
-                BlueBox()
-                // ImageSection().imageSection(),
-                // FlutterLayout().titleSection(),
-                // ButtonRow(context: context).buttonSection(),
-                // TextSection().textSection(),
-              ]
+            body: const Center(
+              child: Row(
+                // mainAxisSize: MainAxisSize.max,
+                // mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  BlueBox(),
+                  BlueBox(),
+                  // BiggerBlueBox(),
+                  // BlueBox()
+                  Flexible(
+                    fit: FlexFit.tight,
+                    flex: 1,
+                    child: BlueBox(),
+                  ),
+                  Flexible(
+                    fit: FlexFit.tight,
+                    flex: 1,
+                    child: BlueBox(),
+                  ),
+                  Flexible(
+                    fit: FlexFit.loose,
+                    flex: 1,
+                    child: BlueBox(),
+                  ),
+                  Flexible(
+                    fit: FlexFit.loose,
+                    flex: 1,
+                    child: BlueBox(),
+                  ),
+                  // ImageSection().imageSection(),
+                  // FlutterLayout().titleSection(),
+                  // ButtonRow(context: context).buttonSection(),
+                  // TextSection().textSection(),
+                ]
+              ),
             )
         )
     );
