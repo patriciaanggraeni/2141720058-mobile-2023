@@ -1,9 +1,6 @@
-import 'dart:ui';
-
 import 'package:flutter/cupertino.dart';
 
 class ImageSection {
-
   Image imageSection() {
     return const Image(
       image: AssetImage("assets/images/wisata_alam_air_terjun_seweru.png"),
@@ -12,5 +9,4 @@ class ImageSection {
       fit: BoxFit.cover,
     );
   }
-
 }

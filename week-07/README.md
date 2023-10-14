@@ -1,0 +1,42 @@
+## Nama  : Patria Anggara Susilo Putra
+## NIM   : 2141720058
+## Kelas : TI3F
+
+## Pemrograman Mobile Minggu 7
+
+# Praktikum
+
+### Praktikum 1: Membangun Layout di Flutter
+
+Langkah 1: membuat project baru (sebelumnya pilih sdk flutter lalu isi nama dan lokasi project)
+
+![Screenshot_Praktikum_Satu](docs/praktikum1/langkah1.png)
+
+Langkah 2: Buka file lib/main.dart, hasil di bawah menampilkan teks dengan posisi pas di tengah dan mengganti judul dari appbar menjadi "Flutter Layout Demo".
+
+![Screenshot_Praktikum_Satu](docs/praktikum1/langkah2.png)
+
+Langkah 4: Implementasi title row, seperti gambar di bawah jika menggunakan row amaka akan disejajarkan secara horizontal.
+
+![Screenshot_Praktikum_Satu](docs/praktikum1/langkah4.png)
+
+### Praktikum 2: Implementasi button row
+
+Membuat fungsi _buildButtonColumn lalu taruh tampilkan 3 buah icon dan diatur secara horizontal. Pertama dibuat dulu icon dan labelnya dan ditaruh di dalam Column, label ditaruh di bawah icon dengan dimasukkan ke dalam Container, diberi padding atas sebanyal 8 dan diatur alignmentnya menjadi center, nah panggil fungsi tersebut di fungsi buttonSection dan dibungkus dengan Row, diberi Alignment evenly.
+
+![Screenshot_Praktikum_Dua](docs/praktikum2/main.png)
+
+### Praktikum 3: Implementasi text section
+
+Menampilkan deskripsi tentang foto menggunakan Text yang dibungkus dengan Container.
+
+![Screenshot_Praktikum_Tiga](docs/praktikum3/main.png)
+
+### Praktikum 4: Implementasi image section
+
+Buat folder assets, taruh gambar di folder tersebut. setting file pubspec.yaml, tambahkan assets dengan menuliskan path dari gambar, lalu untuk menampilkan gambarnya menggunakan Image dan set image dengan AssetImage("path_image"). taruh di fungsi imageSection()
+
+![Screenshot_Praktikum_Empat](docs/praktikum4/main.png)
+
+## Basic Flutter layout concepts
+
