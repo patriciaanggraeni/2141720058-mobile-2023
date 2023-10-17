@@ -1,100 +1,77 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_layout/layout_basics/main.dart';
-import 'package:flutter_layout/pages/home_page.dart';
-import 'package:flutter_layout/pages/item_page.dart';
 import 'package:flutter_layout/praktikum/praktikum_dua.dart';
 import 'package:flutter_layout/praktikum/praktikum_empat.dart';
 import 'package:flutter_layout/praktikum/praktikum_satu.dart';
 import 'package:flutter_layout/praktikum/praktikum_tiga.dart';
 
-import 'models/item.dart';
-
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
-  MyApp({super.key});
-
-  final List<Item> items = HomePage().items;
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        initialRoute: '/',
-        routes: {
-          '/homepage': (context) => HomePage(),
-          '/item': (context) =>  const ItemPage(),
-        },
-        title: 'Flutter Layout: Patria Anggara Susilo Putra | 2141720058',
-        home: Scaffold(
+      home: Scaffold(
             appBar: AppBar(
-              title: const Text("Daftar Item"),
+              title: const Text("Flutter Layout Demo"),
             ),
-            body: Container(
-              margin: const EdgeInsets.all(8),
-              child: Column(
-                children: [
-                  const Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      ClipOval(
-                        child: Image(
-                          image: AssetImage("assets/images/profile.jpg"),
-                          width: 75,
+            body: Center(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    Row(
+                      children: [
+                        const Padding(
+                            padding: EdgeInsets.all(8.0),
+                            child: ClipOval(
+                                child: Image(
+                              image: AssetImage("assets/images/profile.jpg"),
+                              width: 50,
+                              height: 50,
+                              fit: BoxFit.cover,
+                            ))),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Text(
+                              'Mr. Patria Anggara',
+                              style: Theme.of(context).textTheme.headlineSmall,
+                            ),
+                            const Text('Experienced App Developer'),
+                          ],
                         ),
-                      ),
-                     Column(
-                       crossAxisAlignment: CrossAxisAlignment.start,
-                       children: [
-                         Text(
-                           "Patria Anggara Susilo Putra",
-                           style: TextStyle(
-                             fontSize: 20,
-                             fontWeight: FontWeight.bold,
-                           ),
-                         ),
-                         SizedBox(height: 10,),
-                         Text(
-                            "2141720058",
-                            style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                       ],
-                     )
-                    ],
-                  ),
-                  const SizedBox(height: 8),
-                  Expanded(
-                    child: ListView.builder(
-                      padding: const EdgeInsets.all(8),
-                      itemCount: items.length,
-                      itemBuilder: (context, index) {
-                        final item = items[index];
-                        return InkWell(
-                          onTap: () => Navigator.pushNamed(context, "/item", arguments: item),
-                          child: Card(
-                            child: Container(
-                              margin: const EdgeInsets.all(8),
-                              child: Row(
-                                children: [
-                                  Expanded(child: Text(item.name)),
-                                  Expanded(
-                                    child: Text(
-                                      item.price.toString(),
-                                      textAlign: TextAlign.end,
-                                    ),
-                                  )
-                                ],
-                              ),
-                            ),
-                          ),
-                        );
-                      },
+                      ],
                     ),
-                  ),
-                ],
-              ),
+                    const SizedBox(height: 8),
+                    const Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.all(10),
+                          child: Row(
+                            children: [
+                              Text(
+                                '123 Main Street',
+                              ),
+                              SizedBox(width: 20),
+                              Text(
+                                '(415) 555-0198',
+                              ),
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                    const SizedBox(height: 16),
+                    const Row(
+                      children: [],
+                    ),
+                  ],
+              )
             )
         )
     );
