@@ -6,6 +6,11 @@
 
 # Praktikum
 
+<h3>
+    Untuk melihat hasil run Praktikum 5: Navigation bisa
+    <a href="#result">klik di sini.</a>
+</h3>
+
 ### Praktikum 1: Membangun Layout di Flutter
 
 Langkah 1: membuat project baru (sebelumnya pilih sdk flutter lalu isi nama dan lokasi project)
@@ -126,3 +131,9 @@ Buat folder assets, taruh gambar di folder tersebut. setting file pubspec.yaml, 
 ### 10. Putting All Together
 <img src="docs/layout_basics/15.jpg" width="200px">
 <img src="docs/layout_basics/16.jpg" width="200px">
+
+<div id="result">
+    <br><br>
+    <h1>Hasil Run Aplikasi</h1>
+    <img src="docs/praktikum5/hasil.gif">
+</div>
