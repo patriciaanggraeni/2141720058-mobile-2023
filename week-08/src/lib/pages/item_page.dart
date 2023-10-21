@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../models/item.dart';
 
 class ItemPage extends StatelessWidget {
