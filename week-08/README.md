@@ -6,4 +6,5 @@
 <img src="docs/hasil.gif">
 <br><br><br><br><br>
 <h1>Flutter Basic Week 08 - Tugas</h1>
+<h3>Tunggu Sebentar, Ukuran File agak besar</h3>
 <img src="docs/tugas.gif">
