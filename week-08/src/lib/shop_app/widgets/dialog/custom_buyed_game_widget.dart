@@ -9,8 +9,8 @@ class CustomBuyedGameWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    items.stock -= items.quantity;
-    items.quantity = 0;
+    items.setStock = items.stock;
+    items.setQuantity = 0;
 
     return Container(
         height: 100,

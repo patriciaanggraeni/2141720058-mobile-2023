@@ -15,4 +15,12 @@ class Game {
     required this.quantity,
     required this.rating,
   });
+
+  set setQuantity(int value) {
+    quantity = value;
+  }
+
+  set setStock(int value) {
+    stock = value;
+  }
 }
