@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:src/shop_app/pages/game_shop_page.dart';
 import 'package:src/shop_app/seeder/ItemSeeder.dart';
 import 'package:src/shop_app/seeder/helper.dart';
+import 'package:src/shop_app/widgets/rating_bar/custom_rating_bar_widget.dart';
 
 import '../model/game.dart';
 
@@ -38,13 +38,10 @@ class GameHomePage extends StatelessWidget {
         ),
         body: Container(
           padding: const EdgeInsets.all(10),
-          child: GridView.builder(
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2,
-              mainAxisSpacing: 10,
-              crossAxisSpacing: 10,
-            ),
+          child: StaggeredGridView.countBuilder(
             itemCount: items.length,
+            crossAxisCount: 2,
+            staggeredTileBuilder: (index) => const StaggeredTile.fit(1),
             itemBuilder: (context, index) {
               final item = items[index];
               return InkWell(
@@ -62,11 +59,11 @@ class GameHomePage extends StatelessWidget {
                         mainAxisSize: MainAxisSize.max,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(5.0),
-                            child: Image(
-                              image: NetworkImage(item.image),
-                              fit: BoxFit.cover,
+                          Hero (
+                            tag: 'game_cover_${item.image}',
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(5.0),
+                              child: Image.asset(item.image)
                             ),
                           ),
                           const Spacer(flex: 1,),
@@ -75,45 +72,31 @@ class GameHomePage extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
+                              const SizedBox(height: 10,),
                               Text(
                                 item.name,
                                 style: Helper.customStyleFonts(
-                                  size: 17,
+                                  size: 15,
                                   weigth: FontWeight.bold,
                                   spacing: 1.2,
                                   color: Colors.lightBlueAccent
-                                )
+                                ),
+                                overflow: TextOverflow.ellipsis,
                               ),
-                              const SizedBox(height: 4,),
+                              const SizedBox(height: 5,),
                               Text(
-                                  "Rp${item.price}",
-                                  style: GoogleFonts.questrial(
-                                    fontSize: 10,
-                                    fontWeight: FontWeight.bold,
-                                    letterSpacing: 1.2,
-                                    textBaseline: TextBaseline.ideographic
-                                  )
+                                "Rp${item.price}",
+                                style: Helper.customStyleFonts(
+                                  size: 10,
+                                  weigth: FontWeight.normal,
+                                  spacing: 1.2,
+                                  color: Colors.lightBlueAccent
+                                ),
                               ),
                             ],
                           ),
-                          const Spacer(flex: 1,),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              RatingBar.builder(
-                                initialRating: item.rating,
-                                minRating: 0.5,
-                                direction: Axis.horizontal,
-                                allowHalfRating: true,
-                                onRatingUpdate: (rating) {},
-                                itemSize: 15,
-                                itemBuilder: (context, _) => const Icon(
-                                  Icons.star,
-                                  color: Colors.teal,
-                                ),
-                              )
-                            ],
-                          )
+                          const SizedBox(height: 10,),
+                          CustomRatingBarWidget(items: item,),
                         ],
                       ),
                     ),
