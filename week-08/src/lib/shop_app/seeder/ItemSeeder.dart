@@ -9,6 +9,7 @@ class ItemSeeder {
           image: "assets/call_of_duty.png",
           gameDemoImage: callOfDutyDemoImage(),
           stock: 75,
+          quantity: 0,
           rating: 4.4
       ),
       Game(
@@ -17,6 +18,7 @@ class ItemSeeder {
           image: "assets/minecraft.png",
           gameDemoImage: minecraftDemoImage(),
           stock: 100,
+          quantity: 0,
           rating: 4.5
       ),
       Game(
@@ -25,6 +27,7 @@ class ItemSeeder {
           image: "assets/god_of_war.png",
           gameDemoImage: goOfWarDemoImage(),
           stock: 120,
+          quantity: 0,
           rating: 4.6
       ),
       Game(
@@ -33,6 +36,7 @@ class ItemSeeder {
           image: "assets/battlefield_v.png",
           gameDemoImage: battlefieldDemoImage(),
           stock: 50,
+          quantity: 0,
           rating: 5.0
       ),
       Game(
@@ -41,6 +45,7 @@ class ItemSeeder {
           image: "assets/stray.png",
           gameDemoImage: strayDemoimage(),
           stock: 150,
+          quantity: 0,
           rating: 4
       ),
       Game(
@@ -49,6 +54,7 @@ class ItemSeeder {
           image: "assets/tekken_7.png",
           gameDemoImage: tekkenDemoImage(),
           stock: 200,
+          quantity: 0,
           rating: 3.8
       ),
   ];

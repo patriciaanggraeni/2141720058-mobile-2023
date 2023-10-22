@@ -1,5 +1,4 @@
 import 'package:src/shop_app/widgets/price_and_buy/custom_price_widget.dart';
-
 import '../model/game.dart';
 import 'package:flutter/material.dart';
 import 'button/custom_button_buy_widget.dart';
@@ -29,7 +28,7 @@ class CustomBottomSheet extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           CustomPriceWidget(items: items,),
-          const CustomButtonBuy(),
+          CustomButtonBuy(items: items,),
         ],
       ),
     );

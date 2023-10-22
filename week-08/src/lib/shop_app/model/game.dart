@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 class Game {
   String name, image;
   List<String> gameDemoImage;
-  int price, stock;
+  int price, stock, quantity;
   double rating;
 
   Game({
@@ -12,6 +12,7 @@ class Game {
     required this.image,
     required this.gameDemoImage,
     required this.stock,
+    required this.quantity,
     required this.rating,
   });
 }

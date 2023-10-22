@@ -11,10 +11,7 @@ class CustomPriceAndBuy extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 55,
-      width: MediaQuery
-          .of(context)
-          .size
-          .width,
+      width: MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
         border: Border(
           top: BorderSide(
@@ -28,7 +25,7 @@ class CustomPriceAndBuy extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           CustomPriceWidget(items: items,),
-          const CustomButtonBuy(),
+          CustomButtonBuy(items: items,),
         ],
       ),
     );
