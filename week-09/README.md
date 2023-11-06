@@ -41,10 +41,6 @@
 <p>5. hasilnya seperti berikut</p>
 <img src="docs/praktikum/langkah7/result.jpg" style="width: 300px;"/>
 
-
-
-
-
 ### ------------------------------------------------------------
 <h3>1. Jelaskan maksud dari langkah 2 pada praktikum tersebut!</h3>
 <p>
@@ -67,13 +63,29 @@
     </p>
 </ul>
 
+<h3>3. Pada langkah 6 terdapat dua widget yang ditambahkan, jelaskan fungsi dan perbedaannya!</h3>
+
+<p>
+    Perbedaannya adalah dari warna teks dan backgroundnya, lalu khusus RedTextWidget merupakan widget kustom yang mengembalikan widget AutoSizeText sedangkan teks kedua memanggil widget bawaan yaitu Text, berbedaan lainnya adalah keresponsifan teksnya, jika menggunakan AutoTextSize teks akan menjadi responsif sedangkan Text biasa tidak responsif.
+</p>
+
 <h3>4. Jelaskan maksud dari tiap parameter yang ada di dalam plugin auto_size_text</h3>
 
-1. Key
-2. textKey: mengatur teks yang akan ditampilkan, inputan berupa string
-3. style: memberikan style teks agar semakin menarik
-4. minFontSize: merupakan nilai minimal dari font, jika font sudah berada pada ukuran minimal, maka ukurannya tidak akan bisa mengecil lagi (misal sudah terlalu banyak teks)
-5. maxFontSize: merupakan nilai maksimal dari font, ukuran tidak akan berubah ketika melebihi batas maksimal ukuran font (misal minim teks tapi containernya lebar)
-6. softWrap: jika teks terlau panjang, maka secara otomatis akan ditaruh di bawah (bukan membuat baris baru, tapi dilanjutkan dibawahnya)
-7. wordWrap: jika teks sudah mencapai batas, maka akan otomatis dilanjutkan di bawahnya (baris baru)
-8. maxLines: menentukan batas maksimal dari jumlah baris teks.
+<ul>
+    <li>Key: untuk mengidentifikasikan widget.</li>
+    <li>textKey: mengatur teks yang akan ditampilkan, inputan berupa string.</li>
+    <li>style: memberikan style teks agar semakin menarik.</li>
+    <li> minFontSize: merupakan nilai minimal dari font, jika font sudah berada pada ukuran minimal, maka ukurannya tidak akan bisa mengecil lagi (misal sudah terlalu banyak teks).</li>
+    <li>maxFontSize: merupakan nilai maksimal dari font, ukuran tidak akan berubah ketika melebihi batas maksimal ukuran font (misal minim teks tapi containernya lebar).</li>
+    <li> softWrap: jika teks terlau panjang, maka secara otomatis akan ditaruh di bawah (bukan membuat baris baru, tapi dilanjutkan dibawahnya).</li>
+    <li> wordWrap: jika teks sudah mencapai batas, maka akan otomatis dilanjutkan di bawahnya (baris baru).</li>
+    <li>maxLines: menentukan batas maksimal dari jumlah baris teks.</li>
+    <li>stepGranularity: menentukan seberapa banyak ukuran font berubah ketika ukuran layar juga berubah. misal diset menjadi 5, maka font akan bertambah atau mengurang sebanyak 5.</li>
+    <li> group: berguna untuk melakukan grouping teks jika ingin suatu teks memiliki ukuran yang sama.</li>
+    <li> textDirection: mengubah arah teks dari left to right (ltr) bisa diatur menjadi right to left (rtl) .</li>
+    <li> locale: digunakan untuk mengatur preferensi bahasa.</li>
+    <li>overflowReplacement: menggantikan dnegan widget lain jika teks melebihi batas container.</li>
+    <li> textScaleFactor: mengubah ukuran teks pada layout tanpa mengubah ukuran font secara langsung.</li>
+    <li> semanticLabel: memberikan deskripsi singkat tentang widget.</li>
+    <li>presetFontSizes: membuat daftar dari ukuran font yang telah ditetapkan sebelumnya.</li>
+</ul>
