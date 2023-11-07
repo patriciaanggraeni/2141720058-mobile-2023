@@ -10,6 +10,16 @@ class PlanScreen extends StatefulWidget {
 
 class _PlanScreenState extends State<PlanScreen> {
   Plan plan = const Plan();
+  late ScrollController scrollController;
+
+  @override
+  void initState() {
+    super.initState();
+    scrollController = ScrollController()
+    ..addListener(() {
+      FocusScope.of(context).requestFocus(FocusNode());
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -17,8 +27,20 @@ class _PlanScreenState extends State<PlanScreen> {
       appBar: AppBar(
         title: const Text("Master Planing Angga"),
       ),
-      body: null,
+      body: _buildList(),
       floatingActionButton: _buildAddTaskButton(),
+    );
+  }
+
+  Widget _buildList() {
+    return ListView.builder(
+      controller: scrollController,
+      itemCount: plan.tasks.length,
+      itemBuilder: (context, index) => _buildTaskTile(plan.tasks[index], index),
+      keyboardDismissBehavior: Theme.of(context).platform ==
+      TargetPlatform.iOS
+        ? ScrollViewKeyboardDismissBehavior.onDrag
+        : ScrollViewKeyboardDismissBehavior.manual,
     );
   }
 
@@ -36,4 +58,46 @@ class _PlanScreenState extends State<PlanScreen> {
       }
     );
   }
+
+  Widget _buildTaskTile(Task task, int index) {
+    return ListTile(
+      leading: Checkbox(
+        value: task.complete,
+        onChanged: (selected) {
+          setState(() {
+            plan = Plan(
+              name: plan.name,
+              tasks: List<Task>.from(plan.tasks)
+                ..[index] = Task(
+                  description: task.description,
+                  complete: selected ?? false,
+                ),
+            );
+          });
+        },
+      ),
+      title: TextFormField(
+        initialValue: task.description,
+        onChanged: (text) {
+          setState(() {
+            plan = Plan(
+              name: plan.name,
+              tasks: List<Task>.from(plan.tasks)
+                ..[index] = Task(
+                  description: text,
+                  complete: task.complete,
+                ),
+            );
+          });
+        },
+      ),
+    );
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    scrollController.dispose();
+  }
 }
+
