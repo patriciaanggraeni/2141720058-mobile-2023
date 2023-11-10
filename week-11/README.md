@@ -87,7 +87,7 @@
                 <img src="docs/images/praktikum_satu/demo.gif" style="width: 250px">
             </td>
             <td>
-                <img src="docs/images/praktikum_dua/demo.gif" style="width: 250px">
+                <img src="docs/images/praktikum_dua/demo.gif" style="width: 20px">
             </td>
         </tr>
     <tbody>
