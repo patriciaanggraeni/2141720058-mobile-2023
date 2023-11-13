@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:state_management/provider/plan_provider.dart';
 import 'package:state_management/views/plan_creator_screen.dart';
 import 'package:state_management/views/plan_screen.dart';
-
 import 'models/plan.dart';
-
 void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {

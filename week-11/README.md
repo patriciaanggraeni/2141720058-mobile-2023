@@ -25,7 +25,7 @@
     </li>
     <ul>
         <li>
-           Jawaban ada di bawah.
+           <p>Jawaban ada di bawah.</p>
         </li>
     </ul>
     <li>
@@ -71,8 +71,33 @@
     </li>
     <ul>
         <li>
-           Jawaban ada di bawah.
+           <p>Jawaban ada di bawah.</p>
         </li>
+    </ul>
+</ol>
+
+<h3>Tugas Praktikum 3: State di Multiple Screens</h3>
+<ol>
+    <li>
+       <p>
+            Berdasarkan Praktikum 3 yang telah Anda lakukan, jelaskan maksud dari gambar diagram berikut ini!
+       </p>
+       <img src="docs/images/praktikum_tiga/soal.png">
+    </li>
+    <ul>
+        <li>
+            <p>
+                home diatur sebagai PlanCreatorScreen, di dalam PlanCreatorScreen terdapat widget TextField untuk memasukkan daftar rencana dan ListView untuk menampilkan daftar rencana yang telah dibuat, PlanProvider digunakan untuk menyimpan dan mengatur data rencana. NavigationPush untuk berpindah antar halaman.
+            </p>
+        </li>
+    </ul>
+    <li>
+        Lakukan capture hasil dari Langkah 14 berupa GIF, kemudian jelaskan apa yang telah Anda buat!
+    </li>
+    <ul>
+       <li>
+            <p>Jawaban ada di bawah.</p>
+       </li>
     </ul>
 </ol>
 
@@ -80,6 +105,7 @@
     <thead>
         <th>Praktikum 1</th>
         <th>Praktikum 2</th>
+        <th>Praktikum 3</th>
     </thead>
     <tbody>
         <tr>
@@ -87,7 +113,10 @@
                 <img src="docs/images/praktikum_satu/demo.gif" style="width: 250px">
             </td>
             <td>
-                <img src="docs/images/praktikum_dua/demo.gif" style="width: 20px">
+                <img src="docs/images/praktikum_dua/demo.gif" style="width: 250px">
+            </td>
+            <td>
+                <img src="docs/images/praktikum_tiga//demo.gif" style="width: 250px">
             </td>
         </tr>
     <tbody>

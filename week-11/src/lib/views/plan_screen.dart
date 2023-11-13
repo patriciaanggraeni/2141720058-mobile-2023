@@ -37,7 +37,9 @@ class _PlanScreenState extends State<PlanScreen> {
               children: [
                 Expanded(child: _buildList(currentPlan)),
                 SafeArea(child: Text(currentPlan.completenessMessage)),
-              ],);},),
+              ],
+            );},
+        ),
         floatingActionButton: _buildAddTaskButton(context,),
       );
    }
@@ -49,22 +51,18 @@ class _PlanScreenState extends State<PlanScreen> {
       child: const Icon(Icons.add),
       onPressed: () {
         Plan currentPlan = plan;
-        int planIndex =
-            planNotifier.value.indexWhere((p) => p.name == currentPlan.name);
-        List<Task> updatedTasks = List<Task>.from(currentPlan.tasks)
-          ..add(const Task());
-        planNotifier.value = List<Plan>.from(planNotifier.value)
-          ..[planIndex] = Plan(
-            name: currentPlan.name,
-            tasks: updatedTasks,
-          );
+        int planIndex = planNotifier.value.indexWhere((p) => p.name == currentPlan.name);
+        List<Task> updatedTasks = List<Task>.from(currentPlan.tasks)..add(const Task());
+        planNotifier.value = List<Plan>.from(planNotifier.value)..[planIndex] = Plan(
+          name: currentPlan.name,
+          tasks: updatedTasks,
+        );
         Plan(
           name: currentPlan.name,
           tasks: updatedTasks,
         );},
     );
   }
-
 
   Widget _buildTaskTile(Task task, int index, BuildContext context) {
     ValueNotifier<List<Plan>> planNotifier = PlanProvider.of(context);
@@ -74,10 +72,8 @@ class _PlanScreenState extends State<PlanScreen> {
           value: task.complete,
           onChanged: (selected) {
             Plan currentPlan = plan;
-            int planIndex = planNotifier.value
-                .indexWhere((p) => p.name == currentPlan.name);
-            planNotifier.value = List<Plan>.from(planNotifier.value)
-              ..[planIndex] = Plan(
+            int planIndex = planNotifier.value.indexWhere((p) => p.name == currentPlan.name);
+            planNotifier.value = List<Plan>.from(planNotifier.value)..[planIndex] = Plan(
                 name: currentPlan.name,
                 tasks: List<Task>.from(currentPlan.tasks)
                   ..[index] = Task(
@@ -91,10 +87,8 @@ class _PlanScreenState extends State<PlanScreen> {
         initialValue: task.description,
         onChanged: (text) {
           Plan currentPlan = plan;
-          int planIndex =
-          planNotifier.value.indexWhere((p) => p.name == currentPlan.name);
-          planNotifier.value = List<Plan>.from(planNotifier.value)
-            ..[planIndex] = Plan(
+          int planIndex = planNotifier.value.indexWhere((p) => p.name == currentPlan.name);
+          planNotifier.value = List<Plan>.from(planNotifier.value)..[planIndex] = Plan(
               name: currentPlan.name,
               tasks: List<Task>.from(currentPlan.tasks)
                 ..[index] = Task(
