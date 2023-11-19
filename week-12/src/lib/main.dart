@@ -48,13 +48,14 @@ class _FuturePageState extends State<FuturePage> {
             ElevatedButton(
               child: const Text("GO!"),
               onPressed: () {
-                getNumber().then((value) {
-                  setState(() {
-                    result = value.toString();
-                  });
-                } ).catchError((e) {
-                  result = "An error accurred";
-                } );
+                returnFG();
+                // getNumber().then((value) {
+                //   setState(() {
+                //     result = value.toString();
+                //   });
+                // } ).catchError((e) {
+                //   result = "An error accurred";
+                // } );
                 // getNumber().then((value) {
                 //   setState(() {
                 //     result = value.toString();
@@ -132,6 +133,41 @@ class _FuturePageState extends State<FuturePage> {
     } catch (_) {
       completer.completeError({});
     }
+  }
+
+  void returnFG() {
+    final futures = Future.wait<int>([
+      returnOneAsync(),
+      returnTwoAsync(),
+      returnThreeAsync(),
+    ]);
+
+    futures.then((List<int> value) {
+      int total = 0;
+      for (var element in value) {
+        total += element;
+      }
+      setState(() {
+        result = total.toString();
+      });
+    } );
+
+    // FutureGroup<int> futureGroup = FutureGroup<int>();
+    //
+    // futureGroup.add(returnOneAsync());
+    // futureGroup.add(returnTwoAsync());
+    // futureGroup.add(returnThreeAsync());
+    // futureGroup.close();
+    //
+    // futureGroup.future.then((List<int> value) {
+    //   int total = 0;
+    //   for (var element in value) {
+    //     total += element;
+    //   }
+    //   setState(() {
+    //     result = total.toString();
+    //   });
+    // } );
   }
 }
 
