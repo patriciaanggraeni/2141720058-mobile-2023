@@ -6,6 +6,8 @@ import 'package:http/http.dart';
 import 'package:http/http.dart' as http;
 import 'package:src/geolocator.dart';
 
+import 'navigation_first.dart';
+
 void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
@@ -21,7 +23,8 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: const LocationScreen(),
+      // home: const LocationScreen(),
+      home: const NavigationFirst(),
     );
   }
 }
