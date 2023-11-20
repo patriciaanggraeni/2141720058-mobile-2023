@@ -1,8 +1,10 @@
 import 'dart:async';
 import 'package:async/async.dart';
 import 'package:flutter/material.dart';
+import 'package:geolocator/geolocator.dart';
 import 'package:http/http.dart';
 import 'package:http/http.dart' as http;
+import 'package:src/geolocator.dart';
 
 void main() => runApp(const MyApp());
 
@@ -19,7 +21,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: const FuturePage(),
+      home: const LocationScreen(),
     );
   }
 }
