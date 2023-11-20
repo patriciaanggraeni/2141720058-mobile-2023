@@ -15,14 +15,14 @@ class _LocationScreenState extends State<LocationScreen> {
   @override
   void initState() {
     super.initState();
-    // position = getPosition();
-    getPosition().then((Position myPos) {
-      myPosition = "Latitude: ${myPos.latitude.toString()} - "
-          "Longitude: ${myPos.longitude.toString()}";
-      setState(() {
-        myPosition = myPosition;
-      });
-    } );
+    position = getPosition();
+    // getPosition().then((Position myPos) {
+    //   myPosition = "Latitude: ${myPos.latitude.toString()} - "
+    //       "Longitude: ${myPos.longitude.toString()}";
+    //   setState(() {
+    //     myPosition = myPosition;
+    //   });
+    // } );
   }
 
   @override
@@ -40,24 +40,24 @@ class _LocationScreenState extends State<LocationScreen> {
         child: FutureBuilder(
           future: position,
           builder: (BuildContext context, AsyncSnapshot<Position> snapshot) {
-            if (snapshot.connectionState == ConnectionState.waiting) {
-              return const CircularProgressIndicator();
-            } else if (snapshot.connectionState == ConnectionState.done) {
-              if (snapshot.hasError) {
-                 return const Text('Something terrible happened!');
-              }
-              return Text(snapshot.data.toString());
-            } else {
-              return const Text("");
-            }
-
             // if (snapshot.connectionState == ConnectionState.waiting) {
             //   return const CircularProgressIndicator();
             // } else if (snapshot.connectionState == ConnectionState.done) {
+            //   if (snapshot.hasError) {
+            //      return const Text('Something terrible happened!');
+            //   }
             //   return Text(snapshot.data.toString());
             // } else {
             //   return const Text("");
             // }
+
+            if (snapshot.connectionState == ConnectionState.waiting) {
+              return const CircularProgressIndicator();
+            } else if (snapshot.connectionState == ConnectionState.done) {
+              return Text(snapshot.data.toString());
+            } else {
+              return const Text("");
+            }
           },
         ),
       ),
