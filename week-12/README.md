@@ -93,6 +93,9 @@
 ## Praktikum 8
 
 15. Tambahkan nama panggilan Anda pada tiap properti title sebagai identitas pekerjaan Anda, lalu silakan ganti dengan warna tema favorit Anda.
-!["demo_praktikum_tujuh](docs/images/praktikum7/soal/demo_1.gif)
+!["demo_praktikum_delapan](docs/images/praktikum8/soal/demo_1.gif)
 
-16. 
+16. Cobalah klik setiap button, apa yang terjadi? Mengapa demikian? dan antilah 3 warna pada langkah 5 dengan warna favorit Anda!.
+    - di dalam class NavigationSecond, terdapat tiga tombol untuk merubah warna, ketika setiap tombol ditekan, maka warna yang dipilih akan menggantikan warna background, agar hal itu bisa terjadi, maka memerlukan context.
+    
+!["demo_praktikum_delapan](docs/images/praktikum8/soal/demo_2.gif)
