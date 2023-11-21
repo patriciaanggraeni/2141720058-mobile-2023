@@ -10,7 +10,7 @@ class NavigationFirst extends StatefulWidget {
 }
 
 class _NavigationFirstState extends State<NavigationFirst> {
-  Color color = Colors.blue.shade700;
+  Color color = Colors.purple.shade700;
 
   @override
   Widget build(BuildContext context) {
@@ -23,8 +23,7 @@ class _NavigationFirstState extends State<NavigationFirst> {
         child: ElevatedButton(
           child: const Text("Change Color"),
           onPressed: () => _navigateAndGetColor(context),
-        )
-
+        ),
       ),
     );
   }

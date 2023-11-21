@@ -90,3 +90,9 @@
     - Tidak ada, karena program bejalan dengan baik, maka hasil sama seperti seblumnya.
 !["demo_praktikum_tujuh](docs/images/praktikum7/soal/demo_2.gif)
 
+## Praktikum 8
+
+15. Tambahkan nama panggilan Anda pada tiap properti title sebagai identitas pekerjaan Anda, lalu silakan ganti dengan warna tema favorit Anda.
+!["demo_praktikum_tujuh](docs/images/praktikum7/soal/demo_1.gif)
+
+16. 

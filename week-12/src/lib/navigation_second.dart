@@ -21,24 +21,24 @@ class _NavigationSecondState extends State<NavigationSecond> {
           children: [
             ElevatedButton(
                 onPressed: () {
-                  color = Colors.red.shade700;
+                  color = Colors.purple.shade700;
                   Navigator.pop(context, color);
                 },
-                child: const Text("Red"),
+                child: const Text("Purple"),
             ),
             ElevatedButton(
                 onPressed: () {
-                  color = Colors.green.shade700;
+                  color = Colors.blue.shade200;
                   Navigator.pop(context, color);
                 },
-                child: const Text("Hijau"),
+                child: const Text("Light Blue"),
             ),
             ElevatedButton(
                 onPressed: () {
-                  color = Colors.blue.shade700;
+                  color = Colors.yellow.shade500;
                   Navigator.pop(context, color);
                 },
-                child: const Text("Blue"),
+                child: const Text("Yellow"),
             ),
           ],
         ),

@@ -26,8 +26,8 @@ class MyApp extends StatelessWidget {
       ),
       // home: const FuturePage();
       // home: const LocationScreen(),
-      // home: const NavigationFirst(),
-      home: const NavigationDialogScreen(),
+      home: const NavigationFirst(),
+      // home: const NavigationDialogScreen(),
     );
   }
 }
