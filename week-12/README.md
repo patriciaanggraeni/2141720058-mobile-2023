@@ -79,3 +79,10 @@
 
 !["screenshot_soal_enam](docs/images/praktikum6/soal/soal_12.png)
 !["demo_praktikum_enam](docs/images/praktikum6/soal/demo_2.gif)
+
+## Praktikum 7
+
+13. Apakah ada perbedaan UI dengan praktikum sebelumnya? Mengapa demikian?
+    - Tidak ada perbedaan pada tampilan UI-nya
+!["demo_praktikum_enam](docs/images/praktikum7/soal/demo_1.gif)
+
