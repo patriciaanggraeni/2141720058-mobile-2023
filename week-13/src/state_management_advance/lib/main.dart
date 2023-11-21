@@ -51,10 +51,22 @@ class _StreamHomePageState extends State<StreamHomePage> {
   }
 
   void changeColor() async {
-    await for (var eventColor in colorStream.getColors()) {
+    // await for (var eventColor in colorStream.getColors()) {
+    //   setState(() {
+    //     bgColor = eventColor;
+    //   });
+    // }
+
+    colorStream.getColors().listen((eventColor) {
       setState(() {
         bgColor = eventColor;
       });
-    }
+    });
   }
+
+  /*
+    Jawaban Soal 5 Point Pertama:
+      - listen: memanggil callback setiap kali ada event baru, proses akan berjalan terus tanpa menunggu peristiwa selanjutnya.
+      - await for: akan menunggu setiap elemen yang diterima dari stream sebelum melanjutkan ke iterasi berikutnya.  
+  */
 }
