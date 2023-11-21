@@ -15,7 +15,7 @@ class _NavigationDialogScreenState extends State<NavigationDialogScreen> {
     return Scaffold(
       backgroundColor: color,
       appBar: AppBar(
-        title: const Text("Navigation Dialog Screen"),
+        title: const Text("Patria Anggara Susilo Putra - Navigation Dialog Screen"),
       ),
       body: Center(
         child: ElevatedButton(

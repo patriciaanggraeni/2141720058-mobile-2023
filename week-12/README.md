@@ -61,3 +61,15 @@
     - hasilnya adalah menampilkan pesan error dan setelahnya diblock finally akan menampilkan pesan complete di terminal, dan perbedaannya adalah langkah 1 menggunakan throw exception untuk menampilkan pesan errornya dan mengisikan variabel result pada langkah 2, sedangkan pada langkah 4 menggunakan try, catch dan finally untuk mengatasi error.
 
 !["demo_praktikum_lima](docs/images/praktikum5/soal/demo_2.gif)
+
+## Praktikum 6
+
+11. Tambahkan nama panggilan Anda pada tiap properti title sebagai identitas pekerjaan Anda.
+
+!["screenshot_soal_enam](docs/images/praktikum6/soal/soal_11a.png)
+!["screenshot_soal_enam](docs/images/praktikum6/soal/soal_11b.png)
+!["screenshot_soal_enam](docs/images/praktikum6/soal/soal_11c.png)
+!["screenshot_soal_enam](docs/images/praktikum6/soal/soal_11d.png)
+!["screenshot_soal_enam](docs/images/praktikum6/soal/soal_11e.png)
+!["demo_praktikum_enam](docs/images/praktikum6/soal/demo_1.gif)
+
