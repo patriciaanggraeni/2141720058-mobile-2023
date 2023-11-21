@@ -7,12 +7,28 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
+    return MaterialApp(
+      // Jawaban Soal Nomor 1 Point Pertama
+      title: "Angga",
+      theme: ThemeData(
+        // Jawaban Soal Nomor 1 Point Kedua
+        primarySwatch: Colors.teal,
       ),
+      home: const StreamHomePage(),
     );
+  }
+}
+
+class StreamHomePage extends StatefulWidget {
+  const StreamHomePage({super.key});
+
+  @override
+  State<StreamHomePage> createState() => _StreamHomePageState();
+}
+
+class _StreamHomePageState extends State<StreamHomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return Container();
   }
 }
