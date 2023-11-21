@@ -42,3 +42,9 @@
 
 7. Capture hasil praktikum Anda berupa GIF.
 !["demo_praktikum_empat](docs/images/praktikum4/soal/demo.gif)
+
+8. Jelaskan maksud perbedaan kode langkah 1 dan 4!
+!["screenshot_praktikum_empat](docs/images/praktikum4/langkah1.png)
+!["screenshot_praktikum_empat](docs/images/praktikum4/langkah4.png)
+
+- Perbedaannya terletak pada saat menambahkan elemen futureGroup, di langkah 1 membuat terlebih dahulu objek FutureGroup dan menambahkan elemen satu per satu menggunakan fungsi add, pada langkah 4 membuat sebuah list yang berisikan elemen-elemen fungsi.
