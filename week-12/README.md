@@ -30,3 +30,10 @@
    Completer merupakan kelas yang digunakan untuk membuat Future, fungsi getNumber() mengembalikan sebuah Future. Completer digunakan untuk menghubungkan Future dengan operasi asinkronus yang tidak memberikan Future secara langsung. Fungsi calculate() menunggu selama 5 detik sebelum menyelesaikan completer dengan nilai 42.
 
 !["demo_praktikum_tiga](docs/images/praktikum3/soal/demo_1.gif)
+
+6. Jelaskan maksud perbedaan kode langkah 2 dengan langkah 5-6 tersebut!
+   - Fungsi calculate, menggunakan try and catch, ini berguna untuk menangkap error ketika kode mengalami masalah saat running, sedangkan fungsi calculate pada langkah 2 tidak memiliki try and catch. untuk outputnya sendiri sama.
+
+   - Fungsi getNumber, pada langkah 6 adalah melakukan pengambilan data / get data dari fungsi getNumber pada langkah 2, nilai dari kembalian fungsi getNumber akan diterima oleh parameter value dan menggunakan setState untuk merubah nilai result, di sini juga menggunakan catchError untuk menghandle error yang kemungkinan terjadi saat proses running.
+
+!["demo_praktikum_tiga](docs/images/praktikum3/soal/demo_2.gif)
