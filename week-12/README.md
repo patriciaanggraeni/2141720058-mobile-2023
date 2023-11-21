@@ -99,3 +99,10 @@
     - di dalam class NavigationSecond, terdapat tiga tombol untuk merubah warna, ketika setiap tombol ditekan, maka warna yang dipilih akan menggantikan warna background, agar hal itu bisa terjadi, maka memerlukan context.
     
 !["demo_praktikum_delapan](docs/images/praktikum8/soal/demo_2.gif)
+
+## Praktikum 9
+
+17. Cobalah klik setiap button, apa yang terjadi? Mengapa demikian? dan gantilah 3 warna pada langkah 3 dengan warna favorit Anda! 
+    - Saat mengklik tombol change color, muncul dialog yang mana user disuruh untuk memilih warna kesukaannya, setiap tombol akan merubah warna background.
+
+!["demo_praktikum_sembilan](docs/images/praktikum9/soal/demo.gif)
