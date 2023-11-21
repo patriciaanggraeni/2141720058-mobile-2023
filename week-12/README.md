@@ -47,10 +47,17 @@
 !["screenshot_praktikum_empat](docs/images/praktikum4/langkah1.png)
 !["screenshot_praktikum_empat](docs/images/praktikum4/langkah4.png)
 
-- Perbedaannya terletak pada saat menambahkan elemen futureGroup, di langkah 1 membuat terlebih dahulu objek FutureGroup dan menambahkan elemen satu per satu menggunakan fungsi add, pada langkah 4 membuat sebuah list yang berisikan elemen-elemen fungsi.
+   - Perbedaannya terletak pada saat menambahkan elemen futureGroup, di langkah 1 membuat terlebih dahulu objek FutureGroup dan menambahkan elemen satu per satu menggunakan fungsi add, pada langkah 4 membuat sebuah list yang berisikan elemen-elemen fungsi.
 
 ##  Praktikum 5
 
 9. Capture hasil praktikum Anda berupa GIF.
 !["demo_praktikum_lima](docs/images/praktikum5/soal/demo_1.gif)
 
+10. Panggil method handleError() tersebut di ElevatedButton, lalu run. Apa hasilnya? Jelaskan perbedaan kode langkah 1 dan 4!.
+!["screenshot_praktikum_lima](docs/images/praktikum5/langkah1.png)
+!["screenshot_praktikum_lima](docs/images/praktikum5/langkah4.png)
+
+    - hasilnya adalah menampilkan pesan error dan setelahnya diblock finally akan menampilkan pesan complete di terminal, dan perbedaannya adalah langkah 1 menggunakan throw exception untuk menampilkan pesan errornya dan mengisikan variabel result pada langkah 2, sedangkan pada langkah 4 menggunakan try, catch dan finally untuk mengatasi error.
+
+!["demo_praktikum_lima](docs/images/praktikum5/soal/demo_2.gif)
