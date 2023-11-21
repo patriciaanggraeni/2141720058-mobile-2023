@@ -73,3 +73,9 @@
 !["screenshot_soal_enam](docs/images/praktikum6/soal/soal_11e.png)
 !["demo_praktikum_enam](docs/images/praktikum6/soal/demo_1.gif)
 
+12. Apakah Anda mendapatkan koordinat GPS ketika run di browser? Mengapa demikian?.
+
+    - Titik koordinat tetap muncul walaupun aplikasi dijalankan menggunakan browser, hal ini karena browser akan tetap meminta izin lokasi saat ini, dan ketika user mengizinkannya, maka titik koordinat akan muncul.
+
+!["screenshot_soal_enam](docs/images/praktikum6/soal/soal_12.png)
+!["demo_praktikum_enam](docs/images/praktikum6/soal/demo_2.gif)
