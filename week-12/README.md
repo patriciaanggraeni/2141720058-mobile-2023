@@ -37,3 +37,8 @@
    - Fungsi getNumber, pada langkah 6 adalah melakukan pengambilan data / get data dari fungsi getNumber pada langkah 2, nilai dari kembalian fungsi getNumber akan diterima oleh parameter value dan menggunakan setState untuk merubah nilai result, di sini juga menggunakan catchError untuk menghandle error yang kemungkinan terjadi saat proses running.
 
 !["demo_praktikum_tiga](docs/images/praktikum3/soal/demo_2.gif)
+
+# Praktikum 4
+
+7. Capture hasil praktikum Anda berupa GIF.
+!["demo_praktikum_empat](docs/images/praktikum4/soal/demo.gif)
