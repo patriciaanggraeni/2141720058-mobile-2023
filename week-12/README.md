@@ -84,5 +84,9 @@
 
 13. Apakah ada perbedaan UI dengan praktikum sebelumnya? Mengapa demikian?
     - Tidak ada perbedaan pada tampilan UI-nya
-!["demo_praktikum_enam](docs/images/praktikum7/soal/demo_1.gif)
+!["demo_praktikum_tujuh](docs/images/praktikum7/soal/demo_1.gif)
+
+14. Apakah ada perbedaan UI dengan langkah sebelumnya? Mengapa demikian?
+    - Tidak ada, karena program bejalan dengan baik, maka hasil sama seperti seblumnya.
+!["demo_praktikum_tujuh](docs/images/praktikum7/soal/demo_2.gif)
 
