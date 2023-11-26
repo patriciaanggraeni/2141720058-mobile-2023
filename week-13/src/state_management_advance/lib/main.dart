@@ -38,6 +38,7 @@ class _StreamHomePageState extends State<StreamHomePage> {
   late NumberStream numberStream;
 
   late StreamTransformer transformer;
+  late StreamSubscription subscription;
 
   @override
   void initState() {
@@ -54,25 +55,41 @@ class _StreamHomePageState extends State<StreamHomePage> {
     //   });
     // });
 
-    transformer = StreamTransformer<int, int>.fromHandlers(
-      handleData: (value, sink) {
-        sink.add(value * 10);
-      },
-      handleError: (error, trace, sink) {
-        sink.add(-1);
-      },
-      handleDone: (sink) => sink.close()
-    );
+    // transformer = StreamTransformer<int, int>.fromHandlers(
+    //   handleData: (value, sink) {
+    //     sink.add(value * 10);
+    //   },
+    //   handleError: (error, trace, sink) {
+    //     sink.add(-1);
+    //   },
+    //   handleDone: (sink) => sink.close()
+    // );
+    //
+    // stream.transform(transformer).listen( (event) {
+    //   setState(() {
+    //     lastNumber = event;
+    //   });
+    // } ).onError( (error) {
+    //   setState(() {
+    //     lastNumber = -1;
+    //   });
+    // });
 
-    stream.transform(transformer).listen( (event) {
+    subscription = stream.listen( (event) {
       setState(() {
         lastNumber = event;
       });
-    } ).onError( (error) {
+    } );
+    
+    subscription.onError( (error) {
       setState(() {
         lastNumber = -1;
       });
-    });
+    } );
+
+    subscription.onDone( () {
+      print("OnDone was called");
+    } );
 
     super.initState();
     // colorStream = ColorStream();
@@ -99,6 +116,10 @@ class _StreamHomePageState extends State<StreamHomePage> {
                 onPressed: () => addRandomNumber(),
                 child: const Text("New Random Number")
             ),
+            ElevatedButton(
+                onPressed: () => stopStream(),
+                child: const Text("Stop Subcription"),
+            ),
           ],
         ),
       ),
@@ -123,11 +144,23 @@ class _StreamHomePageState extends State<StreamHomePage> {
     Random random = Random();
     int myNum = random.nextInt(10);
     numberStream.addNumberToSink(myNum);
+    if (!numberStreamController.isClosed) {
+      numberStream.addNumberToSink(myNum);
+    } else {
+      setState(() {
+        lastNumber = -1;
+      });
+    }
     // numberStream.addError();
+  }
+
+  void stopStream() {
+    numberStreamController.close();
   }
 
   @override
   void dispose() {
+    subscription.cancel();
     numberStreamController.close();
     super.dispose();
   }
@@ -164,5 +197,15 @@ class _StreamHomePageState extends State<StreamHomePage> {
         ini diserahkan pada handleData, untuk handleError akan mengirimkan nilai -1 jika terjadi error dan
         handleDone berfungsi menutup sink setelah stream selesai. angka dirubah dan ditampilkan menggunakan
         setState()
+  */
+
+  /*
+    Jawaban Soal 9 Point Pertama:
+      - Langkah 2: membuat langganan (StreamSubscription) ke suatu stream dan menentukan bahwa setiap
+        kali ada data baru dalam stream, nilai lastNumber pada antarmuka pengguna akan diperbarui.
+      - Langkah 6: digunakan untuk membersihkan sumber daya dan menghentikan pendengaran pada stream.
+      - Langkah 8: menghasilkan angka acak dan mencoba menambahkannya ke dalam stream. jika
+        stream sudah ditutup, maka nilai lastNumber diatur menjadi -1. Jadi, ada penanganan untuk
+        situasi di mana stream sudah tidak dapat lagi menerima data.
   */
 }
