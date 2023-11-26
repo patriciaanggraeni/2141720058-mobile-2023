@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:async';
 
 class ColorStream {
   final List<Color> colors = [
@@ -33,4 +34,17 @@ class ColorStream {
     diambil dari list yang telah dibuat sebelumnya. Nilai paramter t akan bertambah setiap detiknya dan dimodulo agar tidak melebihi 
     batas panjang dari list warna.
   */
+}
+
+class NumberStream {
+  final StreamController<int> controller = StreamController<int>();
+
+  void addNumberToSink(int newNumber) {
+    controller.sink.add(newNumber);
+  }
+
+  void close() {
+    controller.close();
+  }
+
 }
