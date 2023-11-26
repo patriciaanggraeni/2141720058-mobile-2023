@@ -43,6 +43,10 @@ class NumberStream {
     controller.sink.add(newNumber);
   }
 
+  void addError() {
+    controller.sink.addError("Error");
+  }
+
   void close() {
     controller.close();
   }

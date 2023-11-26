@@ -46,7 +46,11 @@ class _StreamHomePageState extends State<StreamHomePage> {
       setState(() {
         lastNumber = event;
       });
-    } );
+    } ).onError( (error) {
+      setState(() {
+        lastNumber = -1;
+      });
+    });
     super.initState();
     // colorStream = ColorStream();
     // changeColor();
@@ -94,8 +98,9 @@ class _StreamHomePageState extends State<StreamHomePage> {
 
   void addRandomNumber() {
     Random random = Random();
-    int myNum = random.nextInt(10);
-    numberStream.addNumberToSink(myNum);
+    // int myNum = random.nextInt(10);
+    // numberStream.addNumberToSink(myNum);
+    numberStream.addError();
   }
 
   @override
@@ -118,5 +123,14 @@ class _StreamHomePageState extends State<StreamHomePage> {
       - fungsi addRandomNumber(): Fungsi ini berguna untuk menjeneral angka acak antara 0 sampai 9, menambahkan
         angka yang dihasilkan ke dalam fungsi addNumberToSink(number).
       - fungsi dispose(): Fungsi ini untuk menutup numberStateController untuk membersihkan sumber daya.
+  */
+
+  /*
+    Jawaban Soal 7 Point Pertama:
+      - Kode program langkah 13 - 15 digunakan jika program mengalami error, contohnya seperti numberStream,
+        pada fungsi addRandomNumber(), membuat objek random dan mengisi nilai random ke dalam fungsi
+        addNumberToSink(number) (sebelumnya), sekarang program mengalami error karena tidak memasukkan angka
+        acak pada fungsi addNumberToSink, maka dikasilah fungsi oneError untuk menghandle error yang terjadi,
+        contoh di atas, jika program mengalami error, maka angka acak akan diset ke -1.
   */
 }
