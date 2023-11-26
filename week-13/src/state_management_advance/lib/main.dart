@@ -37,12 +37,34 @@ class _StreamHomePageState extends State<StreamHomePage> {
   late StreamController numberStreamController;
   late NumberStream numberStream;
 
+  late StreamTransformer transformer;
+
   @override
   void initState() {
     numberStream = NumberStream();
     numberStreamController = numberStream.controller;
     Stream stream = numberStreamController.stream;
-    stream.listen( (event) {
+    // stream.listen( (event) {
+    //   setState(() {
+    //     lastNumber = event;
+    //   });
+    // } ).onError( (error) {
+    //   setState(() {
+    //     lastNumber = -1;
+    //   });
+    // });
+
+    transformer = StreamTransformer<int, int>.fromHandlers(
+      handleData: (value, sink) {
+        sink.add(value * 10);
+      },
+      handleError: (error, trace, sink) {
+        sink.add(-1);
+      },
+      handleDone: (sink) => sink.close()
+    );
+
+    stream.transform(transformer).listen( (event) {
       setState(() {
         lastNumber = event;
       });
@@ -51,6 +73,7 @@ class _StreamHomePageState extends State<StreamHomePage> {
         lastNumber = -1;
       });
     });
+
     super.initState();
     // colorStream = ColorStream();
     // changeColor();
@@ -98,9 +121,9 @@ class _StreamHomePageState extends State<StreamHomePage> {
 
   void addRandomNumber() {
     Random random = Random();
-    // int myNum = random.nextInt(10);
-    // numberStream.addNumberToSink(myNum);
-    numberStream.addError();
+    int myNum = random.nextInt(10);
+    numberStream.addNumberToSink(myNum);
+    // numberStream.addError();
   }
 
   @override
@@ -132,5 +155,14 @@ class _StreamHomePageState extends State<StreamHomePage> {
         addNumberToSink(number) (sebelumnya), sekarang program mengalami error karena tidak memasukkan angka
         acak pada fungsi addNumberToSink, maka dikasilah fungsi oneError untuk menghandle error yang terjadi,
         contoh di atas, jika program mengalami error, maka angka acak akan diset ke -1.
+  */
+
+  /*
+    Jawaban Soal 8 Point Pertama:
+      - Transformer digunakan untuk memanipulasi nilai (seperti contoh dikali dengan 10), sebelumnya range
+        angka acak adalah 0 dampai 9, dengan dikalikan 10 maka range angka acak menjadi 0 - 90. Untuk tugas
+        ini diserahkan pada handleData, untuk handleError akan mengirimkan nilai -1 jika terjadi error dan
+        handleDone berfungsi menutup sink setelah stream selesai. angka dirubah dan ditampilkan menggunakan
+        setState()
   */
 }
