@@ -47,7 +47,9 @@ class _StreamHomePageState extends State<StreamHomePage> {
   void initState() {
     numberStream = NumberStream();
     numberStreamController = numberStream.controller;
-    Stream stream = numberStreamController.stream;
+    Stream stream = numberStreamController.stream.asBroadcastStream();
+
+    // Stream stream = numberStreamController.stream;
     // stream.listen( (event) {
     //   setState(() {
     //     lastNumber = event;
@@ -120,7 +122,8 @@ class _StreamHomePageState extends State<StreamHomePage> {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text(lastNumber.toString()),
+            Text(values),
+            // Text(lastNumber.toString()),
             ElevatedButton(
                 onPressed: () => addRandomNumber(),
                 child: const Text("New Random Number")
@@ -222,5 +225,12 @@ class _StreamHomePageState extends State<StreamHomePage> {
     Jawaban Soal 10:
       - Error "Bad state: Stream has already been listened to.", hal ini dikarenakan adanya multiple
         listener pada stream. di dart / flutter, listener hanya bisa digunakan satu kali.
+  */
+
+  /*
+    Jawaban Soal 11 Point Pertama:
+      - Program bisa dijalankan karena pada variabel stream memanggil fungsi asBroadcastStream(), hal
+        ini memungkin kan aplikasi bisa mendengar beberapa listener sekaligus. Makanya saat tombol
+        generate random number ditekan, kedua fungsi subcription terpanggil dan ditampilkan hasilnya.
   */
 }
