@@ -40,6 +40,9 @@ class _StreamHomePageState extends State<StreamHomePage> {
   late StreamTransformer transformer;
   late StreamSubscription subscription;
 
+  late StreamSubscription subscription2;
+  String values = "";
+
   @override
   void initState() {
     numberStream = NumberStream();
@@ -77,10 +80,16 @@ class _StreamHomePageState extends State<StreamHomePage> {
 
     subscription = stream.listen( (event) {
       setState(() {
-        lastNumber = event;
+        values += "$event - ";
       });
     } );
-    
+
+    subscription2 = stream.listen( (event) {
+      setState(() {
+        values += "$event - ";
+      });
+    } );
+
     subscription.onError( (error) {
       setState(() {
         lastNumber = -1;
@@ -207,5 +216,11 @@ class _StreamHomePageState extends State<StreamHomePage> {
       - Langkah 8: menghasilkan angka acak dan mencoba menambahkannya ke dalam stream. jika
         stream sudah ditutup, maka nilai lastNumber diatur menjadi -1. Jadi, ada penanganan untuk
         situasi di mana stream sudah tidak dapat lagi menerima data.
+  */
+
+  /*
+    Jawaban Soal 10:
+      - Error "Bad state: Stream has already been listened to.", hal ini dikarenakan adanya multiple
+        listener pada stream. di dart / flutter, listener hanya bisa digunakan satu kali.
   */
 }
